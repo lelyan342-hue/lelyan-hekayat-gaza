@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور | حكاية غزة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="heritage.html">تراثنا</a>
+            <a href="food.html">من مطبخنا</a>
+            <a href="places.html">حكايات المكان</a>
+            <a href="stories.html">اسمع الحكاية</a>
+        </nav>
+    </header>
+
+    <main class="gallery-page">
+        <h1>معرض صور غزة</h1>
+        <p>صور تحفظ حكايات تراثنا وذاكرتنا وجمال مدينتنا.</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/heritage.jpg" alt="التراث الفلسطيني">
+                <h3>تراثنا الفلسطيني</h3>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/food.jpg" alt="المطبخ الغزّي">
+                <h3>من مطبخنا</h3>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/places.jpg" alt="أماكن غزة">
+                <h3>حكايات المكان</h3>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/stories.jpg" alt="ذكريات غزة">
+                <h3>ذاكرة وحكاية</h3>
+            </div>
+        </div>
+    </main>
+<div id="imageViewer" class="image-viewer">
+    <span id="closeViewer">&times;</span>
+    <img id="largeImage" src="" alt="صورة مكبرة">
+</div>
+
+<script>
+document.querySelectorAll(".gallery-item img").forEach(function(image) {
+    image.style.cursor = "pointer";
+
+    image.onclick = function() {
+        document.getElementById("largeImage").src = image.src;
+        document.getElementById("imageViewer").style.display = "flex";
+    };
+});
+
+document.getElementById("closeViewer").onclick = function() {
+    document.getElementById("imageViewer").style.display = "none";
+};
+
+document.getElementById("imageViewer").onclick = function(event) {
+    if (event.target.id === "imageViewer") {
+        event.currentTarget.style.display = "none";
+    }
+};
+</script>
+
+</body>
+</html>

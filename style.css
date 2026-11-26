@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap');
+:root {
+  --olive: #344C3D;
+  --beige: #F3EBDD;
+  --heritage-red: #873D40;
+  --white: #FFFFFF;
+  --text: #292923;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  background: var(--beige);
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.navbar {
+  min-height: 90px;
+  padding: 20px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--olive);
+  color: var(--white);
+}
+
+.logo {
+  color: var(--white);
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #E7CFA8;
+}
+
+.hero {
+  min-height: 560px;
+  margin: 32px auto;
+  width: 88%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  color: var(--white);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 35, 27, 0.88),
+      rgba(20, 35, 27, 0.35)
+    ),
+    url("images/hero.jpg") center/cover;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.eyebrow {
+  color: #E7CFA8;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.3;
+  margin: 12px 0;
+}
+
+.hero-content > p {
+  font-size: 19px;
+}
+
+.main-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  background: var(--beige);
+  color: var(--olive);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.stories {
+  width: 88%;
+  margin: 80px auto;
+}
+
+.stories h2,
+.about h2 {
+  color: var(--olive);
+  font-size: 34px;
+}
+
+.section-description {
+  margin-bottom: 32px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--white);
+  padding-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3,
+.card p {
+  margin-right: 18px;
+  margin-left: 18px;
+}
+
+.card h3 {
+  color: var(--olive);
+  font-size: 22px;
+}
+
+.about {
+  padding: 60px 8%;
+  background: #E8DECE;
+  text-align: center;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+}
+
+footer {
+  padding: 24px;
+  background: var(--olive);
+  color: var(--white);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero {
+    padding: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    width: 92%;
+    min-height: 450px;
+    padding: 24px;
+  }
+
+  .stories {
+    width: 92%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+/* صفحة اسمع الحكاية */
+
+.audio-hero {
+    background: #344C3D;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.audio-hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.audio-hero p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: auto;
+    line-height: 2;
+    color: #F3EBDD;
+}
+
+.audio-section {
+    width: 88%;
+    margin: 60px auto;
+}
+
+.audio-section h2 {
+    color: #344C3D;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.audio-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.audio-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid #E5DCCB;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.audio-icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.audio-card h3 {
+    color: #344C3D;
+    font-size: 23px;
+}
+
+.audio-card p {
+    color: #555555;
+    line-height: 1.9;
+    min-height: 65px;
+}
+
+.audio-card audio {
+    width: 100%;
+    margin-top: 15px;
+}
+
+@media (max-width: 700px) {
+
+    .audio-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .audio-section {
+        width: 92%;
+    }
+
+    .audio-hero h1 {
+        font-size: 32px;
+    }
+}
+.about {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 40px 25px;
+    box-sizing: border-box;
+}
+
+.about h2 {
+    text-align: center;
+}
+
+.about p {
+    text-align: center;
+    line-height: 2;
+}
+.heritage1-photo {
+    width: 200%;
+    max-width:500px;
+    height:800px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 10px auto;
+    display: block;
+}
+.crafts-photo {
+    display: block;
+    width: 90%;
+    max-width: 650px;
+    height: 450px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+.crafts-photo {
+    display: block;
+    width: 90%;
+    max-width: 650px;
+    height: 380px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+/* صورة العادات والتقاليد */
+.audio-card img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: 380px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+.audio-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.audio-card.active-card {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.audio-card audio {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.audio-card audio::-webkit-media-controls-panel {
+    background-color: #F3EBDD;
+}
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    width: 45px;
+    height: 45px;
+    background-color: #344C3D;
+    color: #F3EBDD;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #873D40;
+    transform: translateY(-4px);
+}
+.welcome-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.welcome-box {
+    background: #F3EBDD;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+}
+
+.welcome-box h2 {
+    color: #344C3D;
+    margin-bottom: 15px;
+}
+
+.welcome-box p {
+    color: #444;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.welcome-box button {
+    background: #873D40;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.welcome-box button:hover {
+    background: #344C3D;
+}
+.gallery-page {
+    text-align: center;
+    padding: 50px 7%;
+}
+
+.gallery-page h1 {
+    color: #344C3D;
+    margin-bottom: 15px;
+}
+
+.gallery-page p {
+    color: #873D40;
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.gallery-item {
+    background: #F3EBDD;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.gallery-item h3 {
+    color: #344C3D;
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.image-viewer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image-viewer img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    margin: auto;
+    border-radius: 12px;
+}
+
+#closeViewer {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+    z-index: 100000;
+}
+/* حركة ناعمة للبطاقات */
+.card,
+.gallery-item,
+.audio-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.gallery-item:hover,
+.audio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+/* تأثير تكبير الصور */
+.gallery-item img,
+.card img {
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img,
+.card:hover img {
+    transform: scale(1.04);
+}
+/* الخط الجديد لكل الموقع */
+body,
+button,
+input,
+textarea {
+    font-family: 'Tajawal', sans-serif;
+}
+/* تحسين وضوح قائمة التنقل */
+nav {
+    background-color: #F3EBDD;
+}
+
+nav a {
+    color: #344C3D;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #873D40;
+}
+/* تمييز رابط الصفحة الحالية */
+nav a.active {
+    color: #873D40;
+    font-weight: 800;
+    border-bottom: 3px solid #873D40;
+    padding-bottom: 6px;
+}
+.about-section {
+    background-color: #F3EBDD;
+    color: #344C3D;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 30px;
+}
+
+.about-section h2 {
+    color: #344C3D;
+    margin-bottom: 20px;
+}
+
+.about-section > p {
+    max-width: 750px;
+    margin: 0 auto 25px;
+    line-height: 2;
+}
+
+.project-info {
+    background-color: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: right;
+}
+
+.project-info p {
+    margin: 12px 0;
+    line-height: 1.8;
+}

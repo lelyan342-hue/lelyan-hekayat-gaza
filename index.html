@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حكاية غزة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a class="logo" href="#">حكاية غزة</a>
+
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#sections">حكاياتنا</a>
+      <a href="#about">عن المشروع</a>
+      <a href="gallery.html">معرض الصور</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">ذاكرة المكان وروح الحكاية</p>
+        <h1>غزة... حكاية أرض وذاكرة</h1>
+        <p>
+          هنا نحفظ الحكايات، ونروي تفاصيل التراث،
+          ونوثّق ذاكرة المكان للأجيال القادمة.
+        </p>
+        <a class="main-button" href="#sections">اكتشف الحكاية</a>
+      </div>
+    </section>
+
+    <section class="stories" id="sections">
+      <h2>اكتشف حكاياتنا</h2>
+      <p class="section-description">
+        لكل تفصيل في تراثنا حكاية تستحق أن تُروى.
+      </p>
+
+      <div class="cards">
+       <article class="card">
+  <a href="heritage.html">
+    <img src="images/heritage.jpg"
+         alt="التطريز والتراث الفلسطيني">
+    <h3>تراثنا</h3>
+  </a>
+  <p>نتعرّف على التطريز والعادات والحرف التراثية.</p>
+</article>
+
+
+       <article class="card">
+  <a href="food.html">
+    <img src="images/food.jpg"
+         alt="اكلات فلسطينية شعبية">
+    <h3>من مطبخنا</h3>
+  </a>
+  <p>حكايات الاكلات الشعبية التي تجمعنا </p>
+</article>
+
+       <article class="card">
+  <a href="places.html">
+    <img src="images/places.jpg"
+         alt="مكان تراثي في غزة ">
+    <h3>حكايات المكان </h3>
+  </a>
+  <p>اماكن واسواق تحمل ذاكرة غزة</p>
+</article>
+
+       <article class="card">
+  <a href="stories.html">
+    <img src="images/stories.jpg"
+         alt="صور وذكريات من الماضي">
+    <h3>اسمع الحكاية </h3>
+  </a>
+  <p>حكايات قصيرة تحفظ في ذاكرة الناس </p>
+</article>
+</div>
+</section>
+
+   <section class="about"  id="about">
+      <h2>ذاكرتنا حكاية لا تنتهي</h2>
+      <p>
+        حكاية غزة مساحة رقمية تهدف إلى توثيق التراث
+        والذاكرة الثقافية الغزية بأسلوب بصري تفاعلي.
+      </p>
+    </section>
+    <section class="about-section" id="about">
+    <h2>عن مشروع حكاية غزة</h2>
+
+    <p>
+        حكاية غزة منصة رقمية تفاعلية تهدف إلى توثيق
+        التراث والذاكرة الغزية، من خلال الصور والحكايات
+        والتسجيلات الصوتية، والتعريف بالعادات والتقاليد
+        والمأكولات والأماكن التراثية.
+    </p>
+
+    <div class="project-info">
+        <p><strong>إعداد الطالبة:</strong> ليليان درويش مصطفى أبو عاصي</p>
+        <p><strong>إشراف:</strong> الدكتور يوسف أبو حصيرة</p>
+        <p><strong>الجامعة:</strong> جامعة فلسطين</p>
+        <p><strong>التخصص:</strong> دبلوم الوسائط المتعددة</p>
+        <p><strong>سنة التخرج:</strong> 2027</p>
+    </div>
+</section>
+  </main>
+
+  <footer>
+    <p>حكاية غزة — مشروع تخرج</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <button id="backToTop" title="العودة للأعلى">↑</button>
+<div id="welcomePopup" class="welcome-popup">
+    <div class="welcome-box">
+        <h2>أهلاً وسهلاً في حكاية غزة ❤️</h2>
+        <p>هون بنحفظ حكاياتنا وتراثنا وذكرياتنا.</p>
+
+        <button type="button" onclick="closeWelcome()">
+            يلا نبدأ
+        </button>
+    </div>
+</div>
+
+<script>
+function closeWelcome() {
+    document.getElementById("welcomePopup").remove();
+}
+</script>
+</body>
+</html>
